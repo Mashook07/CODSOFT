@@ -11,20 +11,6 @@ This repository contains the implementation for **Task 1: Titanic Survival Predi
 └── confusion_matrices.png              # Generated evaluation plots for model comparison
 ```
 
-## Key Findings & Data Insight
-
-During the exploratory data analysis, we uncovered a critical detail about this specific dataset (`test.csv`):
-* **Deterministic Survival Pattern:** The target label `Survived` is a simple deterministic function of the passenger's gender (`Sex`).
-  * **All females survived** (152/152)
-  * **All males did not survive** (266/266)
-* Consequently, any standard classifier can easily achieve **100% accuracy** on this dataset by learning this simple gender rule. However, our model evaluation confirmed this relationship holds true for both Logistic Regression and Random Forest models when evaluated properly.
-
-## Important Bug Fixes & Refactoring
-
-The initial code contained a few issues that were resolved in this project:
-1. **Data Leakage Fix:** The feature matrix `X` originally included the target label `Survived`. This was a major data leakage bug where the model had direct access to the correct answers during training. We fixed this by explicitly dropping the `Survived` column from `X`.
-2. **Pandas Deprecation Warnings:** Replaced deprecated `inplace=True` operations on `.fillna()` and `.replace()` calls with clean, direct variable assignments (e.g. using `.map()` on categorical fields like `Sex` and `Embarked`).
-3. **Logistic Regression Convergence Warning:** Increased `max_iter` parameter in `LogisticRegression` to `1000` to allow the optimization algorithm to converge correctly.
 
 ## Model Comparison
 
