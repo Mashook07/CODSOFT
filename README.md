@@ -1,18 +1,23 @@
-# Titanic Survival Prediction (Codsoft Internship - Task 1)
+# CODSOFT Internship Tasks
 
-This repository contains the implementation for **Task 1: Titanic Survival Prediction** as part of the Codsoft Internship. The project aims to build a machine learning model that predicts whether a passenger survived the Titanic disaster based on features like gender, age, socio-economic class (Pclass), and family relationships.
+This repository contains the implementations for the tasks assigned during the CODSOFT Internship.
 
 ## Project Structure
 
 ```
-├── .gitignore                          # Standard git ignore rules (checkpoints, pycache, etc.)
-├── Titanic Survival Prediction.ipynb   # Main Jupyter Notebook containing analysis, bug fixes, and models
-├── test.csv                            # Titanic passenger dataset
-└── confusion_matrices.png              # Generated evaluation plots for model comparison
+├── .gitignore                                     # Standard git ignore rules (checkpoints, pycache, etc.)
+├── README.md                                      # Project documentation
+│
+└── Task 1 - Titanic Survival Prediction/          # Task 1: Titanic Survival Prediction
+    ├── Titanic Survival Prediction.ipynb          # Jupyter Notebook containing analysis and models
+    └── test.csv                                   # Titanic passenger dataset
 ```
 
+## Task 1: Titanic Survival Prediction
 
-## Model Comparison
+The project aims to build a machine learning model that predicts whether a passenger survived the Titanic disaster based on features like gender, age, socio-economic class (Pclass), and family relationships.
+
+### Model Comparison
 
 We trained and compared two different models on the cleaned dataset:
 1. **Logistic Regression** (baseline)
@@ -25,7 +30,7 @@ Both models achieved perfect precision, recall, and accuracy on the training and
 * **Training Accuracy:** 100% (1.0)
 * **Testing Accuracy:** 100% (1.0)
 
-## Getting Started
+### Getting Started
 
 To run the notebook locally, ensure you have Python installed with the necessary dependencies:
 
@@ -36,5 +41,6 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 Open the Jupyter Notebook:
 
 ```bash
+cd "Task 1 - Titanic Survival Prediction"
 jupyter notebook "Titanic Survival Prediction.ipynb"
 ```
