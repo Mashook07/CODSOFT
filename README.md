@@ -12,12 +12,16 @@ This repository contains the implementations for the tasks assigned during the C
 │   ├── Titanic Survival Prediction.ipynb          # Jupyter Notebook containing analysis and models
 │   └── test.csv                                   # Titanic passenger dataset
 │
-└── Task 2 - Movie Rating Prediction/              # Task 2: Movie Rating Prediction
-    ├── Movie Rating Prediction.ipynb              # Jupyter Notebook containing EDA and regressor models
-    ├── prediction.csv                             # IMDb India movies dataset
-    ├── catboost_training.json                     # CatBoost training metadata
-    ├── learn_error.tsv                            # CatBoost learn error logs
-    └── time_left.tsv                              # CatBoost time estimation logs
+├── Task 2 - Movie Rating Prediction/              # Task 2: Movie Rating Prediction
+│   ├── Movie Rating Prediction.ipynb              # Jupyter Notebook containing EDA and regressor models
+│   ├── prediction.csv                             # IMDb India movies dataset
+│   ├── catboost_training.json                     # CatBoost training metadata
+│   ├── learn_error.tsv                            # CatBoost learn error logs
+│   └── time_left.tsv                              # CatBoost time estimation logs
+│
+└── Task 3/                                        # Task 3: Iris Flower Classification
+    ├── Task 3.ipynb                               # Jupyter Notebook containing EDA and classifier models
+    └── Task 3.csv                                 # Iris flower dataset
 ```
 
 ---
@@ -89,4 +93,44 @@ Navigate to the task folder and open the notebook:
 ```bash
 cd "Task 2 - Movie Rating Prediction"
 jupyter notebook "Movie Rating Prediction.ipynb"
+```
+
+---
+
+## Task 3: Iris Flower Classification
+
+The objective of this task is to build a machine learning model that classifies iris flowers into one of three species — *Iris-setosa*, *Iris-versicolor*, and *Iris-virginica* — based on their sepal and petal measurements.
+
+### Dataset Features
+
+The dataset (`Task 3.csv`) contains 150 iris flower samples with the following features:
+* **sepal_length**: Length of the sepal (cm)
+* **sepal_width**: Width of the sepal (cm)
+* **petal_length**: Length of the petal (cm)
+* **petal_width**: Width of the petal (cm)
+* **species**: Target variable — Iris-setosa, Iris-versicolor, or Iris-virginica
+
+### Models Evaluated & Results
+
+We trained and compared three classification algorithms:
+
+| Classifier | Description |
+| :--- | :--- |
+| **Logistic Regression** | Linear baseline classifier |
+| **K-Nearest Neighbors (KNN)** | Distance-based classifier |
+| **Decision Tree Classifier** | Tree-based non-linear classifier |
+
+### Getting Started
+
+Install the required packages:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+Navigate to the task folder and open the notebook:
+
+```bash
+cd "Task 3"
+jupyter notebook "Task 3.ipynb"
 ```
