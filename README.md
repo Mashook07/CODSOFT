@@ -19,9 +19,14 @@ This repository contains the implementations for the tasks assigned during the C
 │   ├── learn_error.tsv                            # CatBoost learn error logs
 │   └── time_left.tsv                              # CatBoost time estimation logs
 │
-└── Task 3/                                        # Task 3: Iris Flower Classification
-    ├── Task 3.ipynb                               # Jupyter Notebook containing EDA and classifier models
-    └── Task 3.csv                                 # Iris flower dataset
+├── Task 3/                                        # Task 3: Iris Flower Classification
+│   ├── Task 3.ipynb                               # Jupyter Notebook containing EDA and classifier models
+│   └── Task 3.csv                                 # Iris flower dataset
+│
+└── Task 4 - Sales Prediction/                     # Task 4: Sales Prediction
+    ├── Sales Prediction .ipynb                    # Jupyter Notebook containing EDA and regression models
+    ├── car_purchasing.csv                         # Car purchasing dataset with customer demographics
+    └── sales data file.csv                        # Sales transactions dataset
 ```
 
 ---
@@ -133,4 +138,55 @@ Navigate to the task folder and open the notebook:
 ```bash
 cd "Task 3"
 jupyter notebook "Task 3.ipynb"
+```
+
+---
+
+## Task 4: Sales Prediction
+
+The objective of this task is to build a machine learning model that predicts the amount of sales based on advertising expenditure across multiple channels (TV, Radio, Newspaper) and customer demographics (age, salary, etc.). Using regression techniques, the project analyzes the impact of various marketing inputs on product sales.
+
+### Dataset Features
+
+**Sales Data File (`sales data file.csv`)** — Advertising spend vs. sales:
+* **TV**: Advertising spend on TV (in $1000s)
+* **Radio**: Advertising spend on Radio (in $1000s)
+* **Newspaper**: Advertising spend on Newspaper (in $1000s)
+* **Sales**: Target variable — product sales (in 1000 units)
+
+**Car Purchasing Dataset (`car_purchasing.csv`)** — Customer demographics vs. purchase amount:
+* **Customer Name**: Name of the customer
+* **Customer e-mail**: Customer email address
+* **Country**: Country of residence
+* **Gender**: Gender of the customer
+* **Age**: Age of the customer
+* **Annual Salary**: Annual salary of the customer
+* **Credit Card Debt**: Credit card debt of the customer
+* **Net Worth**: Net worth of the customer
+* **Car Purchase Amount**: Target variable — amount spent on car purchase
+
+### Models Evaluated & Results
+
+We trained and compared multiple regression algorithms:
+
+| Regression Model | Description |
+| :--- | :--- |
+| **Linear Regression** | Baseline linear model |
+| **Random Forest Regressor** | Ensemble tree-based model |
+| **Gradient Boosting Regressor** | Sequential boosting model |
+| **Support Vector Regressor (SVR)** | Kernel-based regression |
+
+### Getting Started
+
+Install the required packages:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+Navigate to the task folder and open the notebook:
+
+```bash
+cd "Task 4 - Sales Prediction"
+jupyter notebook "Sales Prediction .ipynb"
 ```
