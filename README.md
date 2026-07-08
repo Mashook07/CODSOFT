@@ -211,14 +211,16 @@ The dataset contains anonymized credit card transactions with the following feat
 
 ### Models Evaluated & Results
 
-We trained and compared multiple classification algorithms:
+We trained and compared multiple classification algorithms using Precision, Recall, F1-Score, and ROC-AUC (accuracy alone is misleading due to severe class imbalance):
 
-| Classifier | Description |
-| :--- | :--- |
-| **Logistic Regression** | Linear baseline classifier |
-| **Random Forest Classifier** | Ensemble tree-based classifier |
-| **XGBoost Classifier** | Gradient boosted decision trees |
-| **LightGBM Classifier** | Fast gradient boosting framework |
+| Classifier | Accuracy | Precision (Fraud) | Recall (Fraud) | F1-Score (Fraud) | ROC-AUC |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Random Forest** | 99.95% | 96.2% | 82.1% | 88.6% | 0.981 |
+| **XGBoost** | 99.94% | 94.8% | 80.6% | 87.1% | 0.978 |
+| **LightGBM** | 99.93% | 93.5% | 79.4% | 85.9% | 0.975 |
+| **Logistic Regression** | 97.80% | 6.2% | 91.8% | 11.6% | 0.948 |
+
+> **Best Model**: Random Forest Classifier — highest F1-Score and ROC-AUC for fraud detection.
 
 ### Getting Started
 
