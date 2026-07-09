@@ -23,10 +23,14 @@ This repository contains the implementations for the tasks assigned during the C
 │   ├── Task 3.ipynb                               # Jupyter Notebook containing EDA and classifier models
 │   └── Task 3.csv                                 # Iris flower dataset
 │
-└── Task 4 - Sales Prediction/                     # Task 4: Sales Prediction
-    ├── Sales Prediction .ipynb                    # Jupyter Notebook containing EDA and regression models
-    ├── car_purchasing.csv                         # Car purchasing dataset with customer demographics
-    └── sales data file.csv                        # Sales transactions dataset
+├── Task 4 - Sales Prediction/                     # Task 4: Sales Prediction
+│   ├── Sales Prediction .ipynb                    # Jupyter Notebook containing EDA and regression models
+│   ├── car_purchasing.csv                         # Car purchasing dataset with customer demographics
+│   └── sales data file.csv                        # Sales transactions dataset
+│
+└── Task 5 - Credit card fraud detection/          # Task 5: Credit Card Fraud Detection
+    ├── Credit Card Fraud Detection.ipynb          # Jupyter Notebook containing EDA and classification models
+    └── requirements.txt                           # Python dependencies for Task 5
 ```
 
 ---
@@ -189,4 +193,44 @@ Navigate to the task folder and open the notebook:
 ```bash
 cd "Task 4 - Sales Prediction"
 jupyter notebook "Sales Prediction .ipynb"
+```
+
+---
+
+## Task 5: Credit Card Fraud Detection
+
+The objective of this task is to build a machine learning model that identifies fraudulent credit card transactions. The dataset is highly imbalanced (genuine transactions far outnumber fraudulent ones), making this a challenging anomaly detection problem. The project applies various techniques such as SMOTE for class balancing and evaluates multiple classifiers.
+
+### Dataset Features
+
+The dataset contains anonymized credit card transactions with the following features:
+* **Time**: Seconds elapsed between the transaction and the first transaction in the dataset
+* **V1–V28**: Principal components obtained through PCA transformation (anonymized)
+* **Amount**: Transaction amount in dollars
+* **Class**: Target variable — `0` for genuine, `1` for fraudulent transaction
+
+### Models Evaluated & Results
+
+We trained and compared multiple classification algorithms:
+
+| Classifier | Description |
+| :--- | :--- |
+| **Logistic Regression** | Linear baseline classifier |
+| **Random Forest Classifier** | Ensemble tree-based classifier |
+| **XGBoost Classifier** | Gradient boosted decision trees |
+| **LightGBM Classifier** | Fast gradient boosting framework |
+
+### Getting Started
+
+Install the required packages:
+
+```bash
+pip install -r "Task 5 - Credit card fraud detection/requirements.txt"
+```
+
+Navigate to the task folder and open the notebook:
+
+```bash
+cd "Task 5 - Credit card fraud detection"
+jupyter notebook "Credit Card Fraud Detection.ipynb"
 ```
